@@ -36,6 +36,7 @@
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a
+# You may pass any option but keep in mind that net/ssh understands a
 # limited set of options, consult the Net::SSH documentation.
 # http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start
 #
@@ -59,3 +60,15 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+# 設定部署 Rails 的模式
+set :rails_env, :production
+
+# 決定要部署版本控制庫的哪一個 branch
+set :branch, 'master'
+
+# 決定部署到遠端伺服器哪個地方，從絕對路徑寫起
+set :deploy_to, '/home/ubuntu/rails-on-ec2'
+
+role :web, %w{deploy@18.166.30.212}
+role :db, %w{deploy@18.166.30.212}
