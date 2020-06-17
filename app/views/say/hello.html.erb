@@ -1,0 +1,31 @@
+<h1>Say#hello</h1>
+<p>Find me in app/views/say/hello.html.erb</p>
+<p>
+  It is now <%= Time.now %>.
+</p>
+<p>
+  It is now <%= @time %>, rendered by variable.
+</p>
+<p>
+  <%= 1.hour.from_now.localtime %>
+</p>
+
+<p>
+  <% @files.each do |file| %>
+    <ul>
+      <li>file name is: <%= file %></li>
+    </ul>
+  <% end %>
+</p>
+
+<p>
+  Say <a href="/say/goodbye">Goodbye</a>! (Using `html a tag`)
+</p>
+
+<p>
+  Say <%= link_to "Goodbye", say_goodbye_path %>! (Using `link_to`)
+</p>
+
+<p>
+  User: <%= @user.name %>
+</p>
