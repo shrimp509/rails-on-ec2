@@ -68,7 +68,7 @@ set :rails_env, :production
 set :branch, 'master'
 
 # 決定部署到遠端伺服器哪個地方，從絕對路徑寫起
-set :deploy_to, '/home/ubuntu/rails-on-ec2'
+set :deploy_to, '/home/ubuntu/remote-deploy'
 
-role :web, %w{deploy@18.166.30.212}
-role :db, %w{deploy@18.166.30.212}
+role :web, %w{ubuntu@18.166.30.212}
+role :db, %w{ubuntu@18.166.30.212}
