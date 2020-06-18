@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post 'api/post' => 'api#create_post'
   post 'api/comment' => 'api#create_comment'
   get 'api/posts' => 'api#get_posts'
+
+  root 'welcome#index'
 end
